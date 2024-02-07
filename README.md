@@ -32,9 +32,7 @@ GeoLogix Solutions uses GPS and blockchain to make deliveries faster and more re
 
 ## Contributors
 
-- John Doe (Project Lead)
-- Jane Smith (Smart Contract Developer)
-- Alice Johnson (Mobile App Developer)
+- Daniel Geda
 
 ## License
 

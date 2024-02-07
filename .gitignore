@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Compiled binary files
+*.o
+*.out
+*.exe
+
+# Compiled JavaScript files
+*.js
+
+# Editor specific files
+.vscode/
+.idea/
+
+# Dependency directories
+/build/
+/dist/
+
+# Environment variables file
+.env
+env/
+venv/
+
+
+# Compiled contract files
+build/
+
+# Other
+*.log
+*.zip

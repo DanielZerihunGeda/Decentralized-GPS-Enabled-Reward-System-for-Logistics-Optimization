@@ -1,0 +1,2 @@
+# Brownie and Ethereum development
+eth-brownie==1.20.0

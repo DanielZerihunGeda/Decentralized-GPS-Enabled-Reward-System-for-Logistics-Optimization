@@ -11,7 +11,7 @@ npm-debug.log
 *.exe
 
 # Compiled JavaScript files
-*.js
+
 
 # Editor specific files
 .vscode/

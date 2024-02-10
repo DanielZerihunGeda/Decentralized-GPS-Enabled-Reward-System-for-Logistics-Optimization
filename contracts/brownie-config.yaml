@@ -1,0 +1,43 @@
+# Project Structure Configuration
+project_structure:
+  contracts: contracts    # Directory containing your Solidity contracts
+  tests: tests           # Directory containing your tests
+  scripts: scripts       # Directory containing your deployment and interaction scripts
+  reports: reports       # Directory to store test reports and other generated reports
+  build: build           # Directory to store compiled contract artifacts and other build files
+  interfaces: interfaces # Directory containing interface files for interacting with external contracts
+  
+# Ganache AppImage Configuration
+ganache:
+  version: 2.5.4          # Version of Ganache AppImage to download
+  url: "https://github.com/trufflesuite/ganache/releases/download/v{{ganache.version}}/ganache-{{ganache.version}}-x86_64.AppImage"  # URL to download Ganache AppImage
+  executable_path: ganache-{{ganache.version}}-x86_64.AppImage  # Executable path of the downloaded Ganache AppImage
+
+# Dependencies Configuration
+dependencies:
+  - "OpenZeppelin/openzeppelin-contracts@5.0.1"  # OpenZeppelin Contracts library
+
+# CI Workflow Configuration
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: |
+        wget {{ ganache.url }}
+        chmod +x {{ ganache.executable_path }}
+
+    - name: Run Ganache
+      run: |
+        ./{{ ganache.executable_path }}
+
+    - name: Compile Contracts
+      run: brownie compile
+
+    - name: Run Tests
+      run: brownie test

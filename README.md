@@ -1,39 +1,52 @@
-# GeoLogix Solutions: Decentralized GPS-Enabled Logistics System
+# Decentralized GPS-Enabled Logistics System
 
-## Overview
-
-GeoLogix Solutions uses GPS and blockchain to make deliveries faster and more reliable. Our app tracks drivers' locations and pays them automatically for sticking to their routes. It's a game-changer for delivery companies.
+This project implements a decentralized GPS-enabled reward system for optimizing logistics operations. It allows managers to create and update routes, while drivers can report their locations to receive rewards based on their performance.
 
 ## Features
 
-- **GPS Tracking**: Our app uses GPS to follow drivers in real-time.
-- **Automatic Payments**: We use blockchain technology to pay drivers instantly when they complete deliveries.
-- **Driver Rating System**: We rate drivers based on how well they follow their routes, rewarding good performance.
-- **Token Rewards**: Drivers earn digital tokens for doing a great job, which they can use or convert to cash.
+- **Manager Dashboard:** Allows managers to create and update routes.
+- **Driver Dashboard:** Allows drivers to report their locations and receive rewards.
 
-## Implementation Steps
+## Technologies Used
 
-### Setting Up Development Environment
+- Solidity: Smart contract development
+- Brownie: Ethereum development framework
+- React.js: Frontend development
+- Leaflet: Interactive maps
+- Ether.js: Ethereum JavaScript library
+- React Native: Mobile application development
 
-1. **Brownie**: Install Brownie with one command and start coding in Python.
-2. **Hardhat**: Set up Hardhat for JavaScript development, perfect if you're comfortable with Node.js.
-3. **Truffle**: Use Truffle if you're already familiar with Ethereum development.
+## Setup Instructions
 
-### Building the App and Smart Contract
+1. Clone the repository.
+2. Install dependencies: `npm install`.
+3. Start the development server: `npm start`.
+4. Open your browser and navigate to `http://localhost:3000`.
+5. install necessary packages `pip install requirements.txt`
+6. initialize brownie
 
-1. **Identify Key Features**: Understand what the app needs to do, like tracking locations and paying drivers.
-2. **Develop Smart Contract**: Write code for the smart contract that powers our app, defining how payments and rewards work.
-3. **Build Mobile App**: Create a mobile app that connects to the smart contract and tracks drivers' GPS locations.
+```bash
+    cd contracts
+    brownie init
+    brownie compile
+ ```
 
-### Testing and Deployment
+## Usage
 
-1. **Write Tests**: Make sure the app and smart contract work as expected by writing and running tests.
-2. **Deploy to Testnet**: Deploy the app and smart contract to a test network to check if everything runs smoothly.
-
+1. Access the manager dashboard to create or update routes.
+2. Access the driver dashboard to report locations and receive rewards.
+   
 ## Contributors
 
 - Daniel Geda
 
+
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+[Check out my blog post](https://medium.com/@lenjisa48/optimizing-logistics-operations-with-blockchain-and-gps-technology-0052ed809562)
+
+
+
+
